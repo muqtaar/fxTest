@@ -8,7 +8,7 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "sla"
   assertions:
   - "@StatusCode == 200"
@@ -21,6 +21,7 @@ generators:
     value: "1000"
     methods: "Get"
     denyRoles: null
+    allowRoles: null
     pathPatterns: "/**"
     resourceSamples: null
     queryParams: null
@@ -31,14 +32,14 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "auth_invalid"
   assertions:
   - "@StatusCode != 200"
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "rbac"
   assertions:
   - "@StatusCode == 403"
@@ -50,6 +51,7 @@ generators:
     value: null
     methods: "Post, Put, Delete"
     denyRoles: "Writer, Reader"
+    allowRoles: null
     pathPatterns: "/api/v1/orgs/**, /api/v1/accounts/**"
     resourceSamples: null
     queryParams: null
@@ -58,6 +60,7 @@ generators:
     value: null
     methods: "Post, Put, Delete"
     denyRoles: "Reader"
+    allowRoles: null
     pathPatterns: "/api/v1/projects/**, /api/v1/regions/**"
     resourceSamples: null
     queryParams: null
@@ -66,6 +69,7 @@ generators:
     value: null
     methods: "Post, Delete"
     denyRoles: "Collaborator"
+    allowRoles: null
     pathPatterns: "/api/v1/projects/**"
     resourceSamples: null
     queryParams: null
@@ -74,6 +78,7 @@ generators:
     value: null
     methods: "Get, Post, Put, Delete"
     denyRoles: "Other"
+    allowRoles: null
     pathPatterns: "/api/v1/**"
     resourceSamples: null
     queryParams: null
@@ -90,6 +95,7 @@ generators:
     value: null
     methods: null
     denyRoles: null
+    allowRoles: null
     pathPatterns: null
     resourceSamples: null
     queryParams: null
@@ -114,7 +120,7 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "log_Forging"
   assertions:
   - "@StatusCode != 200"
@@ -124,7 +130,7 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "invalid_datatype"
   assertions:
   - "@StatusCode != 401"
@@ -132,7 +138,7 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "special_chars "
   assertions:
   - "@StatusCode != 200"
@@ -142,7 +148,7 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "null_value"
   assertions:
   - "@StatusCode != 200"
@@ -152,7 +158,7 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "empty_value"
   assertions:
   - "@StatusCode != 200"
@@ -162,7 +168,7 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "negative_number"
   assertions:
   - "@StatusCode != 401"
@@ -170,7 +176,7 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
 - type: "create"
   assertions:
   - "@StatusCode != 200"
@@ -180,4 +186,4 @@ generators:
   severity: null
   database: null
   inactive: false
-  matches: null
+  matches: []
